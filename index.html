@@ -83,21 +83,28 @@
                 }
                 
                 .grid { 
-                    grid-template-columns: 1fr; /* Single column for better readability */
+                    grid-template-columns: 1fr; 
                     gap: 12px;
                 }
                 
                 .card { 
-                    flex-direction: row !important; 
-                    height: 120px; 
+                    height: auto; 
+                    min-height: 120px;
+                    padding: 0;
+                }
+                
+                .card a {
+                    display: flex !important;
+                    flex-direction: row !important;
                     padding: 8px;
-                    align-items: center;
+                    align-items: flex-start;
                 }
                 
                 .card img { 
                     width: 100px !important; 
                     height: 100px !important; 
                     margin-right: 12px;
+                    flex-shrink: 0;
                 }
                 
                 .card-content {
@@ -105,16 +112,24 @@
                     min-width: 0;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    text-align: left;
                 }
                 
+                .source-tag, .priority-tag {
+                    display: inline-block;
+                    width: fit-content;
+                    margin-bottom: 4px;
+                }
+
                 .name { 
                     font-size: 0.9em; 
-                    height: 2.4em; 
+                    height: auto;
+                    max-height: 2.6em;
                     margin: 2px 0;
+                    line-height: 1.3;
                 }
-                .price { font-size: 1em; }
-                .source-tag { margin-bottom: 2px; }
+                .price { font-size: 1em; margin-top: 2px; }
+                .brand { font-size: 0.75em; }
             }
             
             /* Source Colors */
@@ -214,7 +229,7 @@
     </head>
     <body>
         <h1>最新商品 (<span id="count">662</span>)</h1>
-        <div class="last-updated">最後更新時間：2026-02-25 14:36:41</div>
+        <div class="last-updated">最後更新時間：2026-02-25 14:59:42</div>
         
         <div class="filters">
             <span style="display:block; margin-bottom:10px; color:#777; font-size:0.9em;">點擊標籤篩選：</span>
@@ -3861,8 +3876,22 @@
         </div>
         
         <div class="card" data-source="3COINS">
-            <a href="https://www.palcloset.jp/display/item/2611-HT-KW-04-0/?b=3coins&cl=71" target="_blank">
-                <img src="https://contents.palcloset.jp/static/images/item/360/696863_2896520_1.jpg" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+            <a href="https://www.palcloset.jp/display/item/2611-HT-KW-03-0/?b=3coins&cl=52" target="_blank">
+                <img src="https://contents.palcloset.jp/static/images/item/360/696862_2896519_1.jpg" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+                <div class="card-content">
+                    <span class="source-tag source-3COINS">3COINS</span>
+                    <span class="priority-tag priority-New">New</span>
+                    <div class="brand">3COINS</div>
+                    <div class="name">3COINS Item</div>
+                    <div class="price">¥330</div>
+                    <div class="status">NEW</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="card" data-source="3COINS">
+            <a href="https://www.palcloset.jp/display/item/2611-HT-KW-04-0/?b=3coins&cl=52" target="_blank">
+                <img src="https://contents.palcloset.jp/static/images/item/360/696863_2896521_1.jpg" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
                 <div class="card-content">
                     <span class="source-tag source-3COINS">3COINS</span>
                     <span class="priority-tag priority-New">New</span>
@@ -3889,56 +3918,28 @@
         </div>
         
         <div class="card" data-source="3COINS">
-            <a href="https://www.palcloset.jp/display/item/2611-HT-PS-01-0/?b=3coins&cl=52" target="_blank">
-                <img src="https://contents.palcloset.jp/static/images/item/360/696865_2896527_1.jpg" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
-                <div class="card-content">
-                    <span class="source-tag source-3COINS">3COINS</span>
-                    <span class="priority-tag priority-New">New</span>
-                    <div class="brand">3COINS</div>
-                    <div class="name">3COINS Item</div>
-                    <div class="price">¥550</div>
-                    <div class="status">NEW</div>
-                </div>
-            </a>
-        </div>
-        
-        <div class="card" data-source="3COINS">
-            <a href="https://www.palcloset.jp/display/item/2523-GHLR-00000/?b=3coins" target="_blank">
-                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225153449/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+            <a href="https://www.palcloset.jp/display/item/2524-3C7B176-00/?b=3coins" target="_blank">
+                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225155719/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
                 <div class="card-content">
                     <span class="source-tag source-3COINS">3COINS</span>
                     <span class="priority-tag priority-Popular">Popular</span>
                     <div class="brand">3COINS</div>
                     <div class="name">3COINS Item</div>
-                    <div class="price">550</div>
+                    <div class="price">1,100</div>
                     <div class="status"></div>
                 </div>
             </a>
         </div>
         
         <div class="card" data-source="3COINS">
-            <a href="https://www.palcloset.jp/display/item/2416-HCMWP01-00/?b=3coins" target="_blank">
-                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225153449/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+            <a href="https://www.palcloset.jp/display/item/2524-3C7B177-00/?b=3coins" target="_blank">
+                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225155719/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
                 <div class="card-content">
                     <span class="source-tag source-3COINS">3COINS</span>
                     <span class="priority-tag priority-Popular">Popular</span>
                     <div class="brand">3COINS</div>
                     <div class="name">3COINS Item</div>
-                    <div class="price">2,200</div>
-                    <div class="status"></div>
-                </div>
-            </a>
-        </div>
-        
-        <div class="card" data-source="3COINS">
-            <a href="https://www.palcloset.jp/display/item/2611-PSKFILE-00/?b=3coins" target="_blank">
-                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225153449/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
-                <div class="card-content">
-                    <span class="source-tag source-3COINS">3COINS</span>
-                    <span class="priority-tag priority-Popular">Popular</span>
-                    <div class="brand">3COINS</div>
-                    <div class="name">3COINS Item</div>
-                    <div class="price">880</div>
+                    <div class="price">330</div>
                     <div class="status"></div>
                 </div>
             </a>
@@ -3946,7 +3947,7 @@
         
         <div class="card" data-source="3COINS">
             <a href="https://www.palcloset.jp/display/item/2523-GHLP-00000/?b=3coins" target="_blank">
-                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225153449/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225155719/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
                 <div class="card-content">
                     <span class="source-tag source-3COINS">3COINS</span>
                     <span class="priority-tag priority-Popular">Popular</span>
@@ -3959,42 +3960,56 @@
         </div>
         
         <div class="card" data-source="3COINS">
-            <a href="https://www.palcloset.jp/display/item/2611-HB-01-0000/?b=3coins" target="_blank">
-                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225153449/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+            <a href="https://www.palcloset.jp/display/item/2416-HCMWP01-00/?b=3coins" target="_blank">
+                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225155719/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
                 <div class="card-content">
                     <span class="source-tag source-3COINS">3COINS</span>
                     <span class="priority-tag priority-Popular">Popular</span>
                     <div class="brand">3COINS</div>
                     <div class="name">3COINS Item</div>
-                    <div class="price">330</div>
+                    <div class="price">2,200</div>
                     <div class="status"></div>
                 </div>
             </a>
         </div>
         
         <div class="card" data-source="3COINS">
-            <a href="https://www.palcloset.jp/display/item/2611-HB-02-0000/?b=3coins" target="_blank">
-                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225153449/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+            <a href="https://www.palcloset.jp/display/item/2523-GHLR-00000/?b=3coins" target="_blank">
+                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225155719/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
                 <div class="card-content">
                     <span class="source-tag source-3COINS">3COINS</span>
                     <span class="priority-tag priority-Popular">Popular</span>
                     <div class="brand">3COINS</div>
                     <div class="name">3COINS Item</div>
-                    <div class="price">330</div>
+                    <div class="price">550</div>
                     <div class="status"></div>
                 </div>
             </a>
         </div>
         
         <div class="card" data-source="3COINS">
-            <a href="https://www.palcloset.jp/display/item/2611-HB-13-0000/?b=3coins" target="_blank">
-                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225153449/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+            <a href="https://www.palcloset.jp/display/item/2524-HCMW04-000/?b=3coins" target="_blank">
+                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225155719/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
                 <div class="card-content">
                     <span class="source-tag source-3COINS">3COINS</span>
                     <span class="priority-tag priority-Popular">Popular</span>
                     <div class="brand">3COINS</div>
                     <div class="name">3COINS Item</div>
-                    <div class="price">330</div>
+                    <div class="price">2,750</div>
+                    <div class="status"></div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="card" data-source="3COINS">
+            <a href="https://www.palcloset.jp/display/item/2611-PSKFILE-00/?b=3coins" target="_blank">
+                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225155719/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+                <div class="card-content">
+                    <span class="source-tag source-3COINS">3COINS</span>
+                    <span class="priority-tag priority-Popular">Popular</span>
+                    <div class="brand">3COINS</div>
+                    <div class="name">3COINS Item</div>
+                    <div class="price">880</div>
                     <div class="status"></div>
                 </div>
             </a>
@@ -4002,7 +4017,7 @@
         
         <div class="card" data-source="3COINS">
             <a href="https://www.palcloset.jp/display/item/2524-HCMW02-000/?b=3coins" target="_blank">
-                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225153449/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225155719/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
                 <div class="card-content">
                     <span class="source-tag source-3COINS">3COINS</span>
                     <span class="priority-tag priority-Popular">Popular</span>
@@ -4015,28 +4030,28 @@
         </div>
         
         <div class="card" data-source="3COINS">
-            <a href="https://www.palcloset.jp/display/item/2414-M02-000000/?b=3coins" target="_blank">
-                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225153449/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+            <a href="https://www.palcloset.jp/display/item/2417-BOXPSM-000/?b=3coins" target="_blank">
+                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225155719/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
                 <div class="card-content">
                     <span class="source-tag source-3COINS">3COINS</span>
                     <span class="priority-tag priority-Popular">Popular</span>
                     <div class="brand">3COINS</div>
                     <div class="name">3COINS Item</div>
-                    <div class="price">330</div>
+                    <div class="price">1,650</div>
                     <div class="status"></div>
                 </div>
             </a>
         </div>
         
         <div class="card" data-source="3COINS">
-            <a href="https://www.palcloset.jp/display/item/2515-ETRM15-000/?b=3coins" target="_blank">
-                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225153449/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+            <a href="https://www.palcloset.jp/display/item/2611-PSRDK1-000/?b=3coins" target="_blank">
+                <img src="/static/mallDefault/shared/pc_pal/images/lm20260225155719/load.gif" alt="3COINS Item" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
                 <div class="card-content">
                     <span class="source-tag source-3COINS">3COINS</span>
                     <span class="priority-tag priority-Popular">Popular</span>
                     <div class="brand">3COINS</div>
                     <div class="name">3COINS Item</div>
-                    <div class="price">330</div>
+                    <div class="price">770</div>
                     <div class="status"></div>
                 </div>
             </a>
@@ -7963,34 +7978,6 @@
         </div>
         
         <div class="card" data-source="SuperDelivery">
-            <a href="https://www.superdelivery.com/p/r/pd_p/14868633/" target="_blank">
-                <img src="https://c.superdelivery.com/ip/n/sa/300/300/www.superdelivery.com/product_image/014/868/633/14868633_s_2.jpg" alt="■2026SS　先行予約■　カラフルピーチ　うるちゅるポップシール　ミニキャラ/アップ" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
-                <div class="card-content">
-                    <span class="source-tag source-SuperDelivery">SuperDelivery</span>
-                    
-                    <div class="brand">Paddy's Market（パディス マーケット）</div>
-                    <div class="name">■2026SS　先行予約■　カラフルピーチ　うるちゅるポップシール　ミニキャラ/アップ</div>
-                    <div class="price">Login Required</div>
-                    <div class="status">New Arrival</div>
-                </div>
-            </a>
-        </div>
-        
-        <div class="card" data-source="SuperDelivery">
-            <a href="https://www.superdelivery.com/p/r/pd_p/14868623/" target="_blank">
-                <img src="https://c.superdelivery.com/ip/n/sa/300/300/www.superdelivery.com/product_image/014/868/623/14868623_s_2.jpg" alt="■2026SS　先行予約■　カラフルピーチ　うるちゅるポップシール　ミニキャラ" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
-                <div class="card-content">
-                    <span class="source-tag source-SuperDelivery">SuperDelivery</span>
-                    
-                    <div class="brand">Paddy's Market（パディス マーケット）</div>
-                    <div class="name">■2026SS　先行予約■　カラフルピーチ　うるちゅるポップシール　ミニキャラ</div>
-                    <div class="price">Login Required</div>
-                    <div class="status">New Arrival</div>
-                </div>
-            </a>
-        </div>
-        
-        <div class="card" data-source="SuperDelivery">
             <a href="https://www.superdelivery.com/p/r/pd_p/14725703/" target="_blank">
                 <img src="https://c.superdelivery.com/ip/n/sa/300/300/www.superdelivery.com/product_image/014/725/703/14725703_s_1001.jpg" alt="【2026新作】【M〜L】モノクロパッチワークスカート(N42-224)(5号店) FM5" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
                 <div class="card-content">
@@ -8678,12 +8665,40 @@
         
         <div class="card" data-source="SuperDelivery">
             <a href="https://www.superdelivery.com/p/r/pd_p/14843414/" target="_blank">
-                <img src="https://c.superdelivery.com/ip/n/sa/300/300/www.superdelivery.com/product_image/014/843/414/14843414_s_1001.jpg" alt="【2026春夏新作】裾レースドッキングジップパーカー｜異素材フードライトアウター" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+                <img src="https://c.superdelivery.com/ip/n/sa/300/300/www.superdelivery.com/product_image/014/843/414/14843414_s_1003.jpg" alt="【2026春夏新作】裾レースドッキングジップパーカー｜異素材フードライトアウター" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
                 <div class="card-content">
                     <span class="source-tag source-SuperDelivery">SuperDelivery</span>
                     
                     <div class="brand">speranza（スペランザ）</div>
                     <div class="name">【2026春夏新作】裾レースドッキングジップパーカー｜異素材フードライトアウター</div>
+                    <div class="price">Login Required</div>
+                    <div class="status">New Arrival</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="card" data-source="SuperDelivery">
+            <a href="https://www.superdelivery.com/p/r/pd_p/14806277/" target="_blank">
+                <img src="https://c.superdelivery.com/ip/n/sa/300/300/www.superdelivery.com/product_image/014/806/277/14806277_s_2.jpg" alt="360度グーンと伸びる(^_-)-☆ ゼロ ストレス デニム ワイドカーゴパンツ 2サイズ展開 M~L LL" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+                <div class="card-content">
+                    <span class="source-tag source-SuperDelivery">SuperDelivery</span>
+                    
+                    <div class="brand">絵舟</div>
+                    <div class="name">360度グーンと伸びる(^_-)-☆ ゼロ ストレス デニム ワイドカーゴパンツ 2サイズ展開 M~L LL</div>
+                    <div class="price">Login Required</div>
+                    <div class="status">New Arrival</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="card" data-source="SuperDelivery">
+            <a href="https://www.superdelivery.com/p/r/pd_p/14871325/" target="_blank">
+                <img src="https://c.superdelivery.com/ip/n/sa/300/300/www.superdelivery.com/product_image/014/871/325/14871325_s_2.jpg" alt="バルーンヘムダンボールニットプルオーバー" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=No+Image'">
+                <div class="card-content">
+                    <span class="source-tag source-SuperDelivery">SuperDelivery</span>
+                    
+                    <div class="brand">Trish</div>
+                    <div class="name">バルーンヘムダンボールニットプルオーバー</div>
                     <div class="price">Login Required</div>
                     <div class="status">New Arrival</div>
                 </div>
